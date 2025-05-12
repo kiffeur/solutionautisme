@@ -406,19 +406,19 @@ nav.active {
 /* Mobile-first hero section */
 .hero {
   height: auto;
-  min-height: 100vh;
+  min-height: 110vh;
   background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
   display: flex;
   align-items: center;
   position: relative;
   overflow: hidden;
-  padding: 120px 0 60px;
+  padding: 120px 0 80px;
 }
 
 @media (min-width: 768px) {
   .hero {
     height: 100vh;
-    min-height: 700px;
+    min-height: 750px;
     padding: 0;
   }
 }
@@ -499,22 +499,48 @@ nav.active {
 
 /* Mobile-first hero paragraph */
 .hero-content p {
-  font-size: 16px;
+  font-size: 14px;
   margin-bottom: 25px;
   opacity: 0.9;
-  line-height: 1.6;
+  line-height: 1.5;
+  max-height: 40vh;
+  overflow-y: auto;
+  padding-right: 10px;
+  text-align: justify;
+}
+
+/* Style de la barre de défilement pour le paragraphe */
+.hero-content p::-webkit-scrollbar {
+  width: 4px;
+}
+
+.hero-content p::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.hero-content p::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+}
+
+.hero-content p::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
 }
 
 @media (min-width: 768px) {
   .hero-content p {
-    font-size: 17px;
+    font-size: 15px;
     margin-bottom: 30px;
+    max-height: 30vh;
+    padding-right: 15px;
   }
 }
 
 @media (min-width: 992px) {
   .hero-content p {
-    font-size: 18px;
+    font-size: 16px;
+    max-height: 25vh;
   }
 }
 
@@ -524,6 +550,7 @@ nav.active {
   flex-direction: column;
   gap: 10px;
   width: 100%;
+  margin-top: 20px;
 }
 
 @media (min-width: 576px) {
@@ -531,6 +558,7 @@ nav.active {
     flex-direction: row;
     gap: 15px;
     width: auto;
+    margin-top: 25px;
   }
 }
 
@@ -1145,6 +1173,349 @@ nav.active {
 .stat-label {
   font-size: 18px;
   opacity: 0.9;
+}
+
+/* Mission Section */
+.mission {
+  background-color: var(--light-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.mission::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 200px;
+  height: 200px;
+  background-color: rgba(85, 144, 150, 0.1);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.mission::after {
+  content: '';
+  position: absolute;
+  bottom: -80px;
+  left: -80px;
+  width: 300px;
+  height: 300px;
+  background-color: rgba(6, 156, 212, 0.08);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+/* Mobile-first mission content */
+.mission-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 768px) {
+  .mission-content {
+    gap: 40px;
+    margin-top: 40px;
+  }
+}
+
+/* Mobile-first mission card */
+.mission-card {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: var(--white-color);
+  border-radius: var(--border-radius);
+  padding: 30px;
+  box-shadow: var(--box-shadow);
+  transition: all 0.5s ease;
+  position: relative;
+  overflow: hidden;
+  border-top: 3px solid transparent;
+}
+
+@media (min-width: 576px) {
+  .mission-card {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+.mission-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  border-top: 3px solid var(--tertiary-color-1);
+}
+
+.mission-card:nth-child(2):hover {
+  border-top: 3px solid var(--secondary-color);
+}
+
+.mission-card:nth-child(3):hover {
+  border-top: 3px solid var(--tertiary-color-2);
+}
+
+.mission-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 50px 50px 0;
+  border-color: transparent rgba(85, 144, 150, 0.1) transparent transparent;
+  transition: all 0.5s ease;
+  opacity: 0;
+}
+
+.mission-card:hover::before {
+  opacity: 1;
+}
+
+/* Mobile-first mission icon */
+.mission-icon {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 15px;
+  transition: all 0.5s ease;
+  box-shadow: 0 5px 15px rgba(6, 156, 212, 0.3);
+}
+
+.axe-number {
+  color: var(--white-color);
+  font-weight: 700;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+@media (min-width: 576px) {
+  .mission-icon {
+    margin: 0;
+    flex-shrink: 0;
+  }
+}
+
+.mission-card:hover .mission-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.mission-icon i {
+  font-size: 28px;
+  color: var(--white-color);
+  transition: all 0.5s ease;
+}
+
+.mission-card:hover .mission-icon i {
+  transform: scale(1.2);
+}
+
+/* Mobile-first mission text */
+.mission-text {
+  text-align: center;
+}
+
+@media (min-width: 576px) {
+  .mission-text {
+    text-align: left;
+    padding-left: 20px;
+  }
+}
+
+.mission-text h3 {
+  font-size: 22px;
+  margin-bottom: 12px;
+  color: var(--dark-color);
+  position: relative;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.mission-card:hover .mission-text h3 {
+  color: var(--secondary-color);
+}
+
+.mission-text p {
+  color: var(--text-color);
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+/* Objectifs Section */
+.objectifs {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: var(--white-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.objectifs::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('data:image/svg+xml;utf8,<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M10 10 L90 10 L90 90 L10 90 Z" fill="none" stroke="white" stroke-width="1" opacity="0.1"/></svg>');
+  background-size: 50px 50px;
+  opacity: 0.05;
+  z-index: 0;
+}
+
+.objectifs .container {
+  position: relative;
+  z-index: 1;
+}
+
+.objectifs .section-header h2,
+.objectifs .section-header p {
+  color: var(--white-color);
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.objectifs .section-header h2 .highlight-contrast {
+  color: var(--tertiary-color-2);
+  position: relative;
+}
+
+.objectifs .section-header h2 .highlight-contrast::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--tertiary-color-2);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s ease;
+}
+
+.objectifs .section-header:hover h2 .highlight-contrast::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Mobile-first objectifs grid */
+.objectifs-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--grid-gap-mobile);
+  margin-top: 30px;
+}
+
+@media (min-width: 576px) {
+  .objectifs-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .objectifs-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--grid-gap-desktop);
+    margin-top: 40px;
+  }
+}
+
+/* Mobile-first objectif card */
+.objectif-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: var(--border-radius);
+  padding: 30px;
+  transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.objectif-card::before {
+  content: '';
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), transparent);
+  transition: all 0.5s ease;
+}
+
+.objectif-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  background-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.objectif-card:hover::before {
+  top: 0;
+}
+
+.objectif-number {
+  font-size: 48px;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.15);
+  margin-bottom: 15px;
+  transition: all 0.5s ease;
+  line-height: 1;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.objectif-card:hover .objectif-number {
+  color: rgba(255, 255, 255, 0.25);
+  transform: scale(1.2);
+}
+
+.objectif-card h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: var(--white-color);
+  position: relative;
+  padding-bottom: 10px;
+  transition: all 0.3s ease;
+}
+
+.objectif-card h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background-color: var(--tertiary-color-2);
+  transition: all 0.5s ease;
+}
+
+.objectif-card:hover h3::after {
+  width: 80px;
+}
+
+.objectif-card p {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.7;
+  font-size: 15px;
+  margin-top: auto;
+  transition: all 0.3s ease;
+}
+
+.objectif-card:hover p {
+  color: rgba(255, 255, 255, 1);
 }
 
 /* À Propos Section */
