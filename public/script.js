@@ -577,6 +577,93 @@ document.addEventListener("DOMContentLoaded", () => {
   `
   document.head.appendChild(styleSheet)
 
+  // Animations interactives pour les sections Mission et Objectifs
+  const initMissionObjectifsAnimations = () => {
+    const missionCards = document.querySelectorAll('.mission-card');
+    const objectifCards = document.querySelectorAll('.objectif-card');
+
+    // Animation interactive pour les cartes de mission
+    missionCards.forEach(card => {
+      card.addEventListener('mouseenter', function() {
+        const icon = this.querySelector('.mission-icon');
+        icon.style.transform = 'scale(1.1) rotate(5deg)';
+        
+        // Animation légère de pulsation
+        let scale = 1.1;
+        const pulse = setInterval(() => {
+          scale = scale === 1.1 ? 1.08 : 1.1;
+          icon.style.transform = `scale(${scale}) rotate(5deg)`;
+        }, 500);
+        
+        // Stocker l'intervalle pour le nettoyer plus tard
+        this.setAttribute('data-interval', pulse);
+      });
+
+      card.addEventListener('mouseleave', function() {
+        const icon = this.querySelector('.mission-icon');
+        icon.style.transform = '';
+        
+        // Nettoyer l'intervalle
+        clearInterval(parseInt(this.getAttribute('data-interval')));
+      });
+
+      // Ajouter une animation au toucher pour les appareils mobiles
+      card.addEventListener('touchstart', function() {
+        const icon = this.querySelector('.mission-icon');
+        icon.style.transform = 'scale(1.1) rotate(5deg)';
+      });
+
+      card.addEventListener('touchend', function() {
+        const icon = this.querySelector('.mission-icon');
+        setTimeout(() => {
+          icon.style.transform = '';
+        }, 300);
+      });
+    });
+
+    // Animation interactive pour les cartes d'objectifs
+    objectifCards.forEach(card => {
+      card.addEventListener('mouseenter', function() {
+        const number = this.querySelector('.objectif-number');
+        number.style.transform = 'scale(1.2)';
+        
+        // Animation de rotation légère
+        let rotation = 0;
+        const rotate = setInterval(() => {
+          rotation = (rotation + 1) % 6;
+          number.style.transform = `scale(1.2) rotate(${rotation - 3}deg)`;
+        }, 100);
+        
+        // Stocker l'intervalle pour le nettoyer plus tard
+        this.setAttribute('data-interval', rotate);
+      });
+
+      card.addEventListener('mouseleave', function() {
+        const number = this.querySelector('.objectif-number');
+        number.style.transform = '';
+        
+        // Nettoyer l'intervalle
+        clearInterval(parseInt(this.getAttribute('data-interval')));
+      });
+
+      // Ajouter une animation au toucher pour les appareils mobiles
+      card.addEventListener('touchstart', function() {
+        const number = this.querySelector('.objectif-number');
+        number.style.transform = 'scale(1.2)';
+      });
+
+      card.addEventListener('touchend', function() {
+        const number = this.querySelector('.objectif-number');
+        setTimeout(() => {
+          number.style.transform = '';
+        }, 300);
+      });
+    });
+  };
+
+  // Initialiser les animations après le chargement complet de la page
+  window.addEventListener('load', initMissionObjectifsAnimations);
+
   // Données des réalisations
   const realisationsData = [
     {
