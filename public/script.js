@@ -19,23 +19,49 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   })
 
-  // Mobile menu toggle
+  // Mobile menu toggle - version améliorée
   const menuToggle = document.querySelector(".menu-toggle")
   const nav = document.querySelector("nav")
   const navLinks = document.querySelectorAll(".nav-links a")
+  const menuOverlay = document.querySelector(".menu-overlay")
+
+  // Fonction pour ouvrir le menu
+  function openMobileMenu() {
+    nav.classList.add("active")
+    menuToggle.classList.add("menu-active")
+    menuOverlay.classList.add("active")
+    document.body.style.overflow = "hidden" // Empêcher le défilement de la page
+  }
+
+  // Fonction pour fermer le menu
+  function closeMobileMenu() {
+    nav.classList.remove("active")
+    menuToggle.classList.remove("menu-active")
+    menuOverlay.classList.remove("active")
+    document.body.style.overflow = "" // Réactiver le défilement
+  }
 
   menuToggle.addEventListener("click", () => {
-    nav.classList.toggle("active")
-    menuToggle.classList.toggle("active")
-    document.body.classList.toggle("menu-open")
+    if (nav.classList.contains("active")) {
+      closeMobileMenu()
+    } else {
+      openMobileMenu()
+    }
   })
 
+  // Fermer le menu en cliquant sur l'overlay
+  menuOverlay.addEventListener("click", closeMobileMenu)
+
+  // Fermer le menu en cliquant sur un lien
   navLinks.forEach((link) => {
-    link.addEventListener("click", () => {
-      nav.classList.remove("active")
-      menuToggle.classList.remove("active")
-      document.body.classList.remove("menu-open")
-    })
+    link.addEventListener("click", closeMobileMenu)
+  })
+
+  // Fermer le menu avec la touche Escape
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && nav.classList.contains("active")) {
+      closeMobileMenu()
+    }
   })
 
   // Smooth scrolling for anchor links
