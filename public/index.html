@@ -55,11 +55,15 @@
                     <li><a href="#realisations">Réalisations</a></li>
                     <li><a href="#a-propos">À propos</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <li><a href="#inscription" class="cta-button">Inscription École</a></li>
+                    <li><a href="#donation" class="cta-button">Faire un don</a></li>
+                    <li><a href="#inscription" class="cta-button secondary">Inscrire votre enfant</a></li>
                 </ul>
             </nav>
         </div>
     </header>
+    
+    <!-- Menu Overlay -->
+    <div class="menu-overlay"></div>
 
     <!-- Main Content -->
     <main>
@@ -70,7 +74,7 @@
                     <h1 class="animate-text">Ensemble pour la compréhension et l'inclusion <span class="highlight-contrast">des personnes présentant les TND</span></h1>
                     <p class="animate-text delay-1">Solution Autisme Cameroun est une association apolitique à but non lucratif à caractère humanitaire et solidaire des parents, professionnels, personnes affectées ou acquises à la cause des enfants et adultes présentant les TSA (troubles du spectre autistique) qui, suite à l'initiative de sa présidente, voit le jour en mars 2009 et obtient sa reconnaissance juridique le 07 Avril 2011 par l'administrateur civil principal du WOURI, département dans la région du Littoral, pour la simple raison que le siège social de la S.A.C est situé à Douala et son ressort territorial s'étend sur l'ensemble du Cameroun.</p>
                     <div class="hero-buttons animate-text delay-2">
-                        <a href="#inscription" class="primary-button">Inscrire votre enfant</a>
+                        <a href="#donation" class="primary-button">Faire un don</a>
                         <a href="#a-propos" class="secondary-button">Découvrir notre mission</a>
                     </div>
                 </div>
@@ -393,10 +397,10 @@
                                 </div>
                                 <div class="testimonial-author">
                                     <div class="author-image">
-                                        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Marie K.">
+                                        <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8YWZyaWNhbiUyMHdvbWFufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=150&q=80" alt="Aminata K.">
                                     </div>
                                     <div class="author-info">
-                                        <h4>Marie K.</h4>
+                                        <h4>Aminata K.</h4>
                                         <p>Mère de Lucas, 8 ans</p>
                                     </div>
                                 </div>
@@ -409,10 +413,10 @@
                                 </div>
                                 <div class="testimonial-author">
                                     <div class="author-image">
-                                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Paul N.">
+                                        <img src="https://images.unsplash.com/photo-1506277886164-e25aa3f4ef7f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YWZyaWNhbiUyMG1hbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=150&q=80" alt="Moussa N.">
                                     </div>
                                     <div class="author-info">
-                                        <h4>Paul N.</h4>
+                                        <h4>Moussa N.</h4>
                                         <p>Père de Sarah, 6 ans</p>
                                     </div>
                                 </div>
@@ -425,10 +429,10 @@
                                 </div>
                                 <div class="testimonial-author">
                                     <div class="author-image">
-                                        <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Jeanne T.">
+                                        <img src="https://images.unsplash.com/photo-1543269664-56d93c1b41a6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGFmcmljYW4lMjB3b21hbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=150&q=80" alt="Fatou T.">
                                     </div>
                                     <div class="author-info">
-                                        <h4>Jeanne T.</h4>
+                                        <h4>Fatou T.</h4>
                                         <p>Mère de Thomas, 7 ans</p>
                                     </div>
                                 </div>
@@ -449,154 +453,414 @@
         </section>
 
         <!-- Inscription Section -->
-        <section id="inscription" class="inscription">
-            <div class="container">
-                <div class="inscription-grid">
-                    <div class="inscription-content">
-                        <div class="section-header left-align">
-                            <h2>Inscrire votre <span class="highlight">Enfant</span></h2>
-                            <p>Notre école spécialisée accueille les enfants de 3 à 15 ans</p>
-                        </div>
-                        <p class="inscription-text">Notre école offre un environnement adapté et sécurisant, avec un programme éducatif personnalisé pour chaque enfant. Nos éducateurs spécialisés travaillent en étroite collaboration avec les familles pour assurer un suivi cohérent.</p>
-                        <div class="inscription-features">
-                            <div class="feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Éducateurs spécialisés qualifiés</span>
-                            </div>
-                            <div class="feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Petits groupes (max. 6 enfants)</span>
-                            </div>
-                            <div class="feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Suivi personnalisé</span>
-                            </div>
-                            <div class="feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Activités adaptées</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="inscription-form-container">
-                        <form id="inscription-form" class="inscription-form">
-                            <h3>Formulaire de pré-inscription</h3>
-                            <div class="form-group">
-                                <label for="parent-name">Nom du parent</label>
-                                <input type="text" id="parent-name" name="parent-name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="child-name">Nom de l'enfant</label>
-                                <input type="text" id="child-name" name="child-name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="child-age">Âge de l'enfant</label>
-                                <input type="number" id="child-age" name="child-age" min="3" max="15" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="email" id="email" name="email" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="phone">Téléphone</label>
-                                <input type="tel" id="phone" name="phone" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="message">Message (facultatif)</label>
-                                <textarea id="message" name="message" rows="3"></textarea>
-                            </div>
-                            <button type="submit" class="primary-button full-width">Envoyer ma demande</button>
-                            <p class="form-note">Nous vous contacterons dans les 48h pour un premier entretien.</p>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="contact">
+        <section id="inscription" class="inscription-section">
             <div class="container">
                 <div class="section-header">
-                    <h2>Contactez-<span class="highlight">Nous</span></h2>
-                    <p>Nous sommes à votre écoute pour toute question ou information</p>
+                    <h2>Inscrire votre <span class="highlight">Enfant</span></h2>
+                    <p>Un accompagnement personnalisé pour révéler le potentiel unique de chaque enfant</p>
                 </div>
-                <div class="contact-grid">
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <div class="contact-text">
-                                <h3>Adresse</h3>
-                                <p>Bonamoussadi Laboratoire Meka, Douala, Cameroun</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-phone-alt"></i>
-                            </div>
-                            <div class="contact-text">
-                                <h3>Téléphone</h3>
-                                <p>+237 682 84 54 79</p>
-                                <p>+237 697 20 38 22</p>
+                
+                <div class="inscription-hero">
+                    <div class="inscription-image-wrapper">
+                        <div class="inscription-image">
+                            <img src="img/4.jpg" alt="Enfant à l'école spécialisée">
+                            <div class="image-badge">
+                                <span>3-15</span>
+                                <small>ans</small>
                             </div>
                         </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-envelope"></i>
+                        <div class="image-caption">
+                            <div class="caption-icon">
+                                <i class="fas fa-graduation-cap"></i>
                             </div>
-                            <div class="contact-text">
-                                <h3>Email</h3>
-                                <p>solutionautismecameroun1@gmail.com</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-clock"></i>
-                            </div>
-                            <div class="contact-text">
-                                <h3>Horaires</h3>
-                                <p>Lundi - Vendredi: 8h - 16h</p>
-                                <p>Samedi: 9h - 12h</p>
-                            </div>
-                        </div>
-                        <div class="social-links">
-                            <a href="https://www.facebook.com/share/19Snr1Jk8J/" class="social-link" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                            <a href="https://www.youtube.com/@autismecameroun727" class="social-link" target="_blank"><i class="fab fa-youtube"></i></a>
-                            <a href="https://www.linkedin.com/in/solution-autisme-cameroun-9ba7451b5/" class="social-link" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                            <p>Un environnement adapté aux besoins spécifiques de chaque enfant</p>
                         </div>
                     </div>
-                    <div class="contact-form-container">
-                        <form id="contact-form" class="contact-form">
-                            <div class="form-group">
-                                <label for="contact-name">Nom complet</label>
-                                <input type="text" id="contact-name" name="contact-name" required>
+                    
+                    <div class="inscription-content">
+                        <div class="content-header">
+                            <h3>Une éducation spécialisée de qualité</h3>
+                            <div class="header-line"></div>
+                        </div>
+                        
+                        <p class="inscription-description">Notre école spécialisée offre un environnement bienveillant et structuré, conçu pour répondre aux besoins spécifiques des enfants présentant des troubles du spectre autistique. Nous proposons un programme éducatif personnalisé qui favorise le développement cognitif, social et émotionnel de chaque enfant.</p>
+                        
+                        <div class="inscription-features">
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-user-graduate"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <h4>Éducateurs spécialisés</h4>
+                                    <p>Une équipe qualifiée et expérimentée dans l'accompagnement des enfants autistes</p>
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <label for="contact-email">Email</label>
-                                <input type="email" id="contact-email" name="contact-email" required>
+                            
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <h4>Petits groupes</h4>
+                                    <p>Maximum 6 enfants par groupe pour une attention personnalisée</p>
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <label for="contact-subject">Sujet</label>
-                                <input type="text" id="contact-subject" name="contact-subject" required>
+                            
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-clipboard-check"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <h4>Suivi individualisé</h4>
+                                    <p>Programmes adaptés aux besoins spécifiques de chaque enfant</p>
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <label for="contact-message">Message</label>
-                                <textarea id="contact-message" name="contact-message" rows="5" required></textarea>
+                            
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-hands-helping"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <h4>Collaboration familiale</h4>
+                                    <p>Travail en étroite collaboration avec les parents pour un suivi cohérent</p>
+                                </div>
                             </div>
-                            <button type="submit" class="primary-button full-width">Envoyer</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="inscription-process">
+                    <h3 class="process-title">Notre processus d'inscription en 4 étapes</h3>
+                    
+                    <div class="process-steps">
+                        <div class="process-step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>Pré-inscription</h4>
+                                <p>Remplissez le formulaire ci-dessous pour nous faire part de votre intérêt</p>
+                            </div>
+                        </div>
+                        
+                        <div class="process-step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>Premier entretien</h4>
+                                <p>Rencontre avec notre équipe pour discuter des besoins spécifiques de votre enfant</p>
+                            </div>
+                        </div>
+                        
+                        <div class="process-step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>Évaluation</h4>
+                                <p>Période d'observation et d'évaluation pour déterminer le programme adapté</p>
+                            </div>
+                        </div>
+                        
+                        <div class="process-step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h4>Intégration</h4>
+                                <p>Intégration progressive dans le groupe et mise en place du programme personnalisé</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="inscription-form-section">
+                    <div class="form-container">
+                        <div class="form-header">
+                            <div class="form-icon">
+                                <i class="fas fa-file-signature"></i>
+                            </div>
+                            <h3>Formulaire de pré-inscription</h3>
+                        </div>
+                        
+                        <form id="inscription-form" class="inscription-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="parent-name">Nom du parent <span class="required">*</span></label>
+                                    <input type="text" id="parent-name" name="parent-name" placeholder="Votre nom complet" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="email">Email <span class="required">*</span></label>
+                                    <input type="email" id="email" name="email" placeholder="Votre adresse email" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="phone">Téléphone <span class="required">*</span></label>
+                                    <input type="tel" id="phone" name="phone" placeholder="Votre numéro de téléphone" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="child-name">Nom de l'enfant <span class="required">*</span></label>
+                                    <input type="text" id="child-name" name="child-name" placeholder="Nom complet de votre enfant" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="child-age">Âge de l'enfant <span class="required">*</span></label>
+                                    <input type="number" id="child-age" name="child-age" min="3" max="15" placeholder="Âge" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="diagnostic">Diagnostic <span class="required">*</span></label>
+                                    <select id="diagnostic" name="diagnostic" required>
+                                        <option value="" disabled selected>Sélectionnez une option</option>
+                                        <option value="autisme">Autisme</option>
+                                        <option value="asperger">Syndrome d'Asperger</option>
+                                        <option value="ted">TED non spécifié</option>
+                                        <option value="en-cours">En cours de diagnostic</option>
+                                        <option value="autre">Autre</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group full-width">
+                                <label for="message">Informations complémentaires</label>
+                                <textarea id="message" name="message" rows="4" placeholder="Partagez toute information que vous jugez utile pour nous aider à mieux comprendre les besoins de votre enfant"></textarea>
+                            </div>
+                            
+                            <div class="form-footer">
+                                <button type="submit" class="submit-button">Envoyer ma demande</button>
+                                <p class="form-note"><i class="fas fa-info-circle"></i> Nous vous contacterons dans les 48h pour planifier un premier entretien.</p>
+                            </div>
                         </form>
                     </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-content">"L'inscription de notre fils à Solution Autisme Cameroun a été un tournant décisif dans sa vie. L'équipe pédagogique exceptionnelle a su révéler son potentiel et l'aider à progresser au-delà de nos espérances."</p>
+                        <div class="testimonial-author">
+                            <img src="https://randomuser.me/api/portraits/men/55.jpg" alt="Témoignage parent">
+                            <div class="author-info">
+                                <h4>Robert K.</h4>
+                                <p>Parent d'un élève de 7 ans</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="inscription-cta">
+                    <div class="cta-content">
+                        <h3>Des questions sur notre processus d'inscription ?</h3>
+                        <p>Notre équipe est disponible pour répondre à toutes vos questions et vous accompagner dans cette démarche importante.</p>
+                    </div>
+                    <a href="#contact" class="cta-button">Contactez-nous</a>
                 </div>
             </div>
         </section>
-
-        <!-- Map Section -->
-        <section class="map-section">
-            <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.7728248609404!2d9.735765375378008!3d4.087621946937894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNMKwMDUnMTUuNCJOIDnCsDQ0JzE2LjYiRQ!5e0!3m2!1sfr!2scm!4v1651245234567!5m2!1sfr!2scm" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            </div>
-        </section>
+  
     </main>
+
+    <!-- Donation Section -->
+    <section id="donation" class="donation-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Faire un <span class="highlight">Don</span></h2>
+                <p>Votre générosité transforme des vies et construit un avenir meilleur</p>
+            </div>
+            
+            <div class="donation-hero">
+                <div class="donation-hero-content">
+                    <h3>Ensemble, changeons des vies</h3>
+                    <p>Chaque contribution, même modeste, a un impact considérable sur notre capacité à accompagner les enfants autistes et leurs familles. Votre don nous aide à financer nos programmes éducatifs, nos ateliers de formation et nos initiatives de sensibilisation.</p>
+                    <div class="donation-impact">
+                        <div class="impact-item">
+                            <div class="impact-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="impact-text">
+                                <h4>Éducation</h4>
+                                <p>Financement de l'école spécialisée</p>
+                            </div>
+                        </div>
+                        <div class="impact-item">
+                            <div class="impact-icon">
+                                <i class="fas fa-hands-helping"></i>
+                            </div>
+                            <div class="impact-text">
+                                <h4>Soutien</h4>
+                                <p>Accompagnement des familles</p>
+                            </div>
+                        </div>
+                        <div class="impact-item">
+                            <div class="impact-icon">
+                                <i class="fas fa-heartbeat"></i>
+                            </div>
+                            <div class="impact-text">
+                                <h4>Thérapie</h4>
+                                <p>Accès aux soins spécialisés</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="donation-hero-image">
+                    <img src="img/2.jpg" alt="Enfants soutenus par vos dons">
+                </div>
+            </div>
+            
+            <div class="donation-methods-container">
+                <h3 class="methods-title">Comment faire un don</h3>
+                <div class="donation-methods">
+                    <div class="donation-method bank-method">
+                        <div class="method-header">
+                            <div class="method-icon">
+                                <i class="fas fa-university"></i>
+                            </div>
+                            <h4>Virement Bancaire</h4>
+                        </div>
+                        <div class="method-body">
+                            <div class="account-info">
+                                <div class="account-label">Numéro de compte:</div>
+                                <div class="account-value">CM21 10005 00044 05531211001 -85</div>
+                            </div>
+                            <div class="account-info">
+                                <div class="account-label">Bénéficiaire:</div>
+                                <div class="account-value">Solution Autisme Cameroun</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="donation-method orange-method">
+                        <div class="method-header">
+                            <div class="method-icon">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <h4>Orange Money</h4>
+                        </div>
+                        <div class="method-body">
+                            <div class="account-info">
+                                <div class="account-label">Numéro:</div>
+                                <div class="account-value">+237 697 20 38 22</div>
+                            </div>
+                            <div class="account-info">
+                                <div class="account-label">Nom:</div>
+                                <div class="account-value">TCHOUATE NYA GUY MARTIAL</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="donation-method mtn-method">
+                        <div class="method-header">
+                            <div class="method-icon">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <h4>MTN Mobile Money</h4>
+                        </div>
+                        <div class="method-body">
+                            <div class="account-info">
+                                <div class="account-label">Numéro:</div>
+                                <div class="account-value">+237 682 84 54 79</div>
+                            </div>
+                            <div class="account-info">
+                                <div class="account-label">Nom:</div>
+                                <div class="account-value">SOLANGE MBIA ETABA</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="donation-cta">
+                <div class="cta-text">
+                    <h3>Merci pour votre générosité</h3>
+                    <p>Votre soutien fait une différence réelle dans la vie des enfants autistes au Cameroun. Pour toute question concernant les dons, n'hésitez pas à nous contacter.</p>
+                </div>
+                <a href="#contact" class="cta-button">Nous contacter</a>
+            </div>
+        </div>
+    </section>
+
+     <!-- Contact Section -->
+     <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contactez-<span class="highlight">Nous</span></h2>
+                <p>Nous sommes à votre écoute pour toute question ou information</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Adresse</h3>
+                            <p>Bonamoussadi Laboratoire Meka, Douala, Cameroun</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Téléphone</h3>
+                            <p>+237 682 84 54 79</p>
+                            <p>+237 697 20 38 22</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Email</h3>
+                            <p>solutionautismecameroun1@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Horaires</h3>
+                            <p>Lundi - Vendredi: 8h - 16h</p>
+                            <p>Samedi: 9h - 12h</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/share/19Snr1Jk8J/" class="social-link" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.youtube.com/@autismecameroun727" class="social-link" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.linkedin.com/in/solution-autisme-cameroun-9ba7451b5/" class="social-link" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form-container">
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <label for="contact-name">Nom complet</label>
+                            <input type="text" id="contact-name" name="contact-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-email">Email</label>
+                            <input type="email" id="contact-email" name="contact-email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-subject">Sujet</label>
+                            <input type="text" id="contact-subject" name="contact-subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-message">Message</label>
+                            <textarea id="contact-message" name="contact-message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="primary-button full-width">Envoyer</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.7728248609404!2d9.735765375378008!3d4.087621946937894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNMKwMDUnMTUuNCJOIDnCsDQ0JzE2LjYiRQ!5e0!3m2!1sfr!2scm!4v1651245234567!5m2!1sfr!2scm" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer>
@@ -618,7 +882,7 @@
                         <li><a href="#realisations">Réalisations</a></li>
                         <li><a href="#a-propos">À propos</a></li>
                         <li><a href="#contact">Contact</a></li>
-                        <li><a href="#inscription">Inscription École</a></li>
+                        <li><a href="#donation">Faire un don</a></li>
                     </ul>
                 </div>
                 <div class="footer-services">
@@ -670,7 +934,7 @@
                     </div>
                 </div>
                 <div class="chatbot-suggestions-container">
-                    <button class="suggestion-button">Comment inscrire mon enfant ?</button>
+                    <button class="suggestion-button">Comment faire un don ?</button>
                     <button class="suggestion-button">Qu'est-ce que l'autisme ?</button>
                     <button class="suggestion-button">Vos horaires d'ouverture ?</button>
                     <button class="suggestion-button">Comment vous contacter ?</button>
